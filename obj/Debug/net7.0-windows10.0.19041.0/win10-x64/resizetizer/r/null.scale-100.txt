@@ -1,0 +1,240 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <Windows.h>
+
+struct Employer {
+	std::string name = "null";
+	std::string job_title = "null";
+	int salary = -1.0;
+	int dependent_count = -1;
+	int work_experience = -1;
+
+	void set() {
+		std::cout << "Введите ФИО рабочего: ";
+		std::cin.ignore(255, '\n');
+		std::getline(std::cin, this->name);
+		std::cout << "Введите должность: ";
+		std::cin.ignore(255, '\n');
+		std::getline(std::cin, this->job_title);
+		std::cout << "Введите оклад рабочего: ";
+		std::cin >> this->salary;
+		std::cout << "Введите количество иждивенцев рабочего: ";
+		std::cin >> this->dependent_count;
+		std::cout << "Введите опыт работы (лет): ";
+		std::cin >> this->work_experience;
+	}
+	
+	void print() {
+		std::cout << "ФИО: " << this->name << std::endl
+			<< "Должность: " << this->job_title << std::endl
+			<< "Оклад: " << this->salary << std::endl
+			<< "Кол-во иждивенцев: " << this->dependent_count << std::endl
+			<< "Опыт работы: " << this->work_experience << " лет" << std::endl << std::endl;
+	}
+};
+
+std::vector<Employer> emps;
+std::vector<int>found;
+int menu();
+void add();
+void change();
+void del();
+bool search();
+void show();
+std::string tolower(std::string str);
+
+
+int main(int* argv, char** argc) {
+	setlocale(0, "");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	while (true) {
+		switch (menu()) {
+		case 1:
+			add();
+			break;
+		case 2:
+			change();
+			break;
+		case 3:
+			del();
+			break;
+		case 4:
+			search();
+			break;
+		case 5:
+			show();
+			break;
+		case 6:
+			return 0;
+		}
+	}
+	return 0;
+}
+
+
+
+int menu() {
+	system("pause");
+	system("cls");
+	int move;
+	std::cout << "Выберите действие." << std::endl
+		<< "1. Прием на работу" << std::endl
+		<< "2. Изменение реквизитов рабочего" << std::endl
+		<< "3. Увольнение рабочего" << std::endl
+		<< "4. Поиск рабочего" << std::endl
+		<< "5. Ведомости по зарплате (отчет)" << std::endl
+		<< "6. Выход" << std::endl;
+	std::cin >> move;
+	return move;
+}
+
+void add() {
+	Employer emp;
+	emp.set();
+	emps.push_back(emp);
+}
+
+
+
+
+void change() {
+	if (!search()) return;
+	int change_id = -1;
+	while (std::count_if(found.begin(), found.end(), [change_id](int n) {return change_id == n; }) == 0) {
+		std::cout << "Введите, реквизиты какого работника вы бы хотели изменить: ";
+		std::cin >> change_id;
+	}
+
+	int move;
+	std::cout << "Выберите, какие реквизиты вы хотите изменить." << std::endl
+		<< "1. ФИО" << std::endl
+		<< "2. Должность" << std::endl
+		<< "3. Оклад" << std::endl
+		<< "4. Кол-во иждивенцев" << std::endl
+		<< "5. Опыт работы" << std::endl;
+	std::cin >> move;
+	std::cout << "Пожалуйста, введите новые реквизиты: ";
+	switch (move) {
+	case 1:
+	{
+		std::string new_name;
+		std::cin.ignore(255, '\n');
+		std::getline(std::cin, new_name);
+		emps[change_id].name = new_name;
+	}
+	break;
+	case 2:
+	{
+		std::string new_job_title;
+		std::cin.ignore(255, '\n');
+		std::getline(std::cin, new_job_title);
+		emps[change_id].job_title = new_job_title;
+	}
+	break;
+	case 3:
+	{
+		double new_salary;
+		std::cin >> new_salary;
+		emps[change_id].salary = new_salary;
+	}
+	break;
+	case 4:
+	{
+		double new_dependent_count;
+		std::cin >> new_dependent_count;
+		emps[change_id].dependent_count = new_dependent_count;
+	}
+	break;
+	case 5:
+	{
+		int new_work_experience;
+		std::cin >> new_work_experience;
+		emps[change_id].work_experience = new_work_experience;
+	}
+	break;
+	default:
+		std::cout << "Неверный выбор." << std::endl;
+		break;
+	}
+}
+
+
+void del() {
+	if (!search()) return;
+	int del_id = -1;
+	while (std::count_if(found.begin(), found.end(), [del_id](int n) {return del_id == n; }) == 0) {
+		std::cout << "Введите, реквизиты какого работника вы бы хотели изменить: ";
+		std::cin >> del_id;
+	}
+	emps.erase(emps.begin() + del_id);
+}
+
+bool search() {
+	found.clear();
+	int move;
+	int found_id;
+	bool is_found = false;
+	std::cout << "Выберите, по каким реквизитам будет проводиться поиск рабочего." << std::endl
+		<< "1. ФИО" << std::endl
+		<< "2. Должность" << std::endl;
+	std::cin >> move;
+	switch (move) {
+	case 1:
+	{
+		std::string search_name;
+		std::cin.ignore(255, '\n');
+		std::getline(std::cin, search_name);
+		auto it = emps.begin();
+		while ((it = std::find_if(it, emps.end(), [search_name](Employer e) {return tolower(e.name.substr(0, search_name.size())) == tolower(search_name); }))
+			!= emps.end())
+		{
+			is_found = true;
+			found_id = std::distance(emps.begin(), it);
+			found.push_back(found_id);
+			emps[found_id].print();
+			std::cout << "Уникальный номер записи: " << found_id << std::endl << std::endl;
+			it++;
+		}
+	}
+	break;
+	case 2:
+	{
+		std::string search_job_title;
+		std::cin.ignore(255, '\n');
+		std::getline(std::cin, search_job_title);
+		auto it = emps.begin();
+		while ((it = std::find_if(it, emps.end(), [search_job_title](Employer e) {return tolower(e.job_title.substr(0, search_job_title.size())) == tolower(search_job_title); }))
+			!= emps.end())
+		{
+			is_found = true;
+			found_id = std::distance(emps.begin(), it);
+			found.push_back(found_id);
+			emps[found_id].print();
+			std::cout << "Уникальный номер записи: " << found_id << std::endl << std::endl;;
+			it++;
+		}
+	}
+	break;
+	default:
+		std::cout << "Вы выбрали неверно." << std::endl;
+		break;
+	}
+	return is_found;
+}
+
+void show() {
+	std::for_each(emps.begin(), emps.end(), [](Employer e) {e.print(); });
+}
+
+std::string tolower(std::string str) {
+	std::string output = str;
+	for (int i = 0; i < std::size(str); i++)
+	{
+		if (str[i] > 'A' && str[i] < 'Z') output[i] += 'z' - 'Z';
+		if (str[i] > 'А' && str[i] < 'Я') output[i] += 'я' - 'Я';
+	}
+	return output;
+}

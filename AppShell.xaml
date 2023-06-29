@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="crossproba.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:crossproba"
+    xmlns:views="clr-namespace:crossproba.Views"
+    FlyoutHeaderBehavior="CollapseOnScroll">
+
+    <MenuItem 
+        Text="Обучающее приложение"/>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+
+        <Tab Title="(задания и тесты)"
+             Icon="questionmark.png">
+
+            <ShellContent Title="(тесты)"
+                          Route="task"
+                          ContentTemplate="{DataTemplate views:TaskPage}" />
+
+            <ShellContent Title="(доп.тесты?)"
+                          Route="anothertask"
+                          ContentTemplate="{DataTemplate views:AnotherTaskPage}" />
+
+        </Tab>
+
+        <ShellContent Title="(Лидерборд?)"
+                      Icon="questionmark.png"
+                      Route="leaderboard"
+                      ContentTemplate="{DataTemplate views:LeaderboardPage}" />
+
+        <ShellContent Title="(Настройки?)"
+                      Icon="questionmark.png"
+                      Route="settings"
+                      ContentTemplate="{DataTemplate views:SettingsPage}" />
+
+        <ShellContent Title="(Аккаунт?)"
+                      Icon="questionmark.png"
+                      Route="account"
+                      ContentTemplate="{DataTemplate views:AccountPage}" />
+
+
+
+
+    </FlyoutItem>
+</Shell>

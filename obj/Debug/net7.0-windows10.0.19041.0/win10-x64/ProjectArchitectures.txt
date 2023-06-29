@@ -1,0 +1,1 @@
+C:\Users\wryty\source\repos\crossproba\crossproba\crossproba.csproj;x64

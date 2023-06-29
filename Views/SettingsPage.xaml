@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="crossproba.Views.SettingsPage"
+             Title="SettingsPage">
+    <ScrollView>
+        <VerticalStackLayout 
+            x:Name="settingsPageStackLayout"
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label 
+                Text="Здесь будут настройки!"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="settingsPageButton"
+                Text="Кнопка для добавления label в SettingsPage"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="SettingsPageButtonClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
