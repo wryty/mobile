@@ -10,14 +10,14 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>01036ccd-1db8-4792-b2f2-83bcd60ac6ec</PackageIdentityName>
     <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\wryty\source\repos\crossproba\crossproba\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>401F037A8D9A946185867DF7D0BAA6DD7B8A2E5693EB61DDBA10FCB8B4FAEE3E</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>01036ccd-1db8-4792-b2f2-83bcd60ac6ec_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>01036ccd-1db8-4792-b2f2-83bcd60ac6ec_9zz4h110yvjzm!App</RegisteredUserModeAppID>
@@ -26,28 +26,28 @@
     <RegisteredVersion>1.0.0.1</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\wryty\source\repos\crossproba\crossproba\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-05-16T13:57:34.160</Modified>
+      <Modified>2023-06-29T10:04:54.076</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-05-16T13:57:33.659</Modified>
+      <Modified>2023-06-29T10:04:53.587</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\crossproba.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\crossproba.runtimeconfig.json">
       <PackagePath>crossproba.runtimeconfig.json</PackagePath>
-      <Modified>2023-05-16T13:57:33.454</Modified>
+      <Modified>2023-06-29T10:04:53.475</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\crossproba.dll">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\crossproba.dll">
       <PackagePath>crossproba.dll</PackagePath>
-      <Modified>2023-05-16T13:57:30.608</Modified>
+      <Modified>2023-06-29T09:54:51.847</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>crossproba.exe</PackagePath>
-      <Modified>2023-05-16T13:57:30.640</Modified>
+      <Modified>2023-06-29T09:54:51.881</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wryty\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.5\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -917,9 +917,9 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2022-11-08T19:31:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\crossproba.deps.json">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\crossproba.deps.json">
       <PackagePath>crossproba.deps.json</PackagePath>
-      <Modified>2023-05-16T13:57:33.947</Modified>
+      <Modified>2023-06-29T10:04:53.844</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.81\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -933,247 +933,251 @@
       <PackagePath>Microsoft.Maui.pri</PackagePath>
       <Modified>2023-03-21T21:59:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\Resources\Raw\AboutAssets.txt">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
       <Modified>2023-05-10T14:42:58.937</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-05-16T11:31:44.898</Modified>
+      <Modified>2023-05-16T14:13:37.107</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-05-16T11:31:44.921</Modified>
+      <Modified>2023-05-16T14:13:37.129</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-05-16T11:31:44.955</Modified>
+      <Modified>2023-05-16T14:13:37.157</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-05-16T11:31:45.010</Modified>
+      <Modified>2023-05-16T14:13:37.204</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-05-16T11:31:45.196</Modified>
+      <Modified>2023-05-16T14:13:37.419</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
       <Modified>2023-05-10T14:42:58.937</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
       <Modified>2023-05-10T14:42:58.937</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2023-05-16T12:26:00.215</Modified>
+      <Modified>2023-06-29T09:43:57.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.530</Modified>
+      <Modified>2023-06-29T09:43:58.038</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.546</Modified>
+      <Modified>2023-06-29T09:43:58.058</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.560</Modified>
+      <Modified>2023-06-29T09:43:58.074</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.583</Modified>
+      <Modified>2023-06-29T09:43:58.100</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.668</Modified>
+      <Modified>2023-06-29T09:43:58.199</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.297</Modified>
+      <Modified>2023-06-29T09:43:57.706</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.300</Modified>
+      <Modified>2023-06-29T09:43:57.714</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.317</Modified>
+      <Modified>2023-06-29T09:43:57.750</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.304</Modified>
+      <Modified>2023-06-29T09:43:57.722</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.308</Modified>
+      <Modified>2023-06-29T09:43:57.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.272</Modified>
+      <Modified>2023-06-29T09:43:57.648</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.276</Modified>
+      <Modified>2023-06-29T09:43:57.653</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.292</Modified>
+      <Modified>2023-06-29T09:43:57.686</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.280</Modified>
+      <Modified>2023-06-29T09:43:57.660</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.284</Modified>
+      <Modified>2023-06-29T09:43:57.670</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.227</Modified>
+      <Modified>2023-06-29T09:43:57.559</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.231</Modified>
+      <Modified>2023-06-29T09:43:57.565</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.237</Modified>
+      <Modified>2023-06-29T09:43:57.573</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.241</Modified>
+      <Modified>2023-06-29T09:43:57.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.247</Modified>
+      <Modified>2023-06-29T09:43:57.595</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.250</Modified>
+      <Modified>2023-06-29T09:43:57.603</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.254</Modified>
+      <Modified>2023-06-29T09:43:57.610</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.268</Modified>
+      <Modified>2023-06-29T09:43:57.640</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.257</Modified>
+      <Modified>2023-06-29T09:43:57.617</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.260</Modified>
+      <Modified>2023-06-29T09:43:57.625</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.378</Modified>
+      <Modified>2023-06-29T09:43:57.847</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.385</Modified>
+      <Modified>2023-06-29T09:43:57.857</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.393</Modified>
+      <Modified>2023-06-29T09:43:57.867</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.404</Modified>
+      <Modified>2023-06-29T09:43:57.883</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.426</Modified>
+      <Modified>2023-06-29T09:43:57.910</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.347</Modified>
+      <Modified>2023-06-29T09:43:57.799</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.352</Modified>
+      <Modified>2023-06-29T09:43:57.807</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.358</Modified>
+      <Modified>2023-06-29T09:43:57.814</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.363</Modified>
+      <Modified>2023-06-29T09:43:57.823</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.373</Modified>
+      <Modified>2023-06-29T09:43:57.837</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.321</Modified>
+      <Modified>2023-06-29T09:43:57.759</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.327</Modified>
+      <Modified>2023-06-29T09:43:57.766</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.331</Modified>
+      <Modified>2023-06-29T09:43:57.773</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.335</Modified>
+      <Modified>2023-06-29T09:43:57.781</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.342</Modified>
+      <Modified>2023-06-29T09:43:57.792</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.433</Modified>
+      <Modified>2023-06-29T09:43:57.920</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.443</Modified>
+      <Modified>2023-06-29T09:43:57.933</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.456</Modified>
+      <Modified>2023-06-29T09:43:57.949</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.473</Modified>
+      <Modified>2023-06-29T09:43:57.968</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.515</Modified>
+      <Modified>2023-06-29T09:43:58.021</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.183</Modified>
+      <Modified>2023-05-16T14:13:37.565</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.194</Modified>
+      <Modified>2023-05-16T14:13:37.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.209</Modified>
+      <Modified>2023-05-16T14:13:37.601</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.232</Modified>
+      <Modified>2023-05-16T14:13:37.630</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-05-16T12:26:00.285</Modified>
+      <Modified>2023-05-16T14:13:37.697</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\jenya.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\jenya.scale-100.png">
       <PackagePath>jenya.scale-100.png</PackagePath>
       <Modified>2023-05-10T15:51:58.194</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wryty\source\repos\crossproba\crossproba\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\questionmark.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\null.scale-100.txt">
+      <PackagePath>null.scale-100.txt</PackagePath>
+      <Modified>2023-05-17T17:23:36.648</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\questionmark.scale-100.png">
       <PackagePath>questionmark.scale-100.png</PackagePath>
       <Modified>2023-05-16T12:25:56.329</Modified>
     </AppxPackagedFile>
