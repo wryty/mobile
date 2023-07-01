@@ -73,3 +73,15 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = crossproba.Views.TaskPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\TaskPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\TaskPage.xaml
+
+[C:/Users/wryty/Desktop/mobile/Views/TestPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = crossproba.Views.TestPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\TestPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\TestPage.xaml
+
+[C:/Users/wryty/Desktop/mobile/Views/TestsListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = crossproba.Views.TestsListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\TestsListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\TestsListPage.xaml

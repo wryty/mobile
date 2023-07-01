@@ -16,10 +16,33 @@
 
             <Button
                 x:Name="taskPageButton"
-                Text="Кнопка для добавления label в TaskPage"
+                Text="Кнопка для добавления вопроса"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 Clicked="TaskPageButtonClicked" />
+
+            <Button
+                x:Name="answerButton"
+                Text="Проверить ответ"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="AnswerButtonClicked"
+                IsEnabled="False" />
+
+            <Label
+                x:Name="questionLabel"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="Large"
+                TextColor="Black"
+                IsVisible="False" />
+
+            <Entry
+                x:Name="answerEntry"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Placeholder="Введите ответ"
+                IsVisible="False" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -1,47 +1,29 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="crossproba.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:crossproba"
-    xmlns:views="clr-namespace:crossproba.Views"
-    FlyoutHeaderBehavior="CollapseOnScroll">
+<Shell x:Class="crossproba.AppShell"
+       xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:crossproba"
+       xmlns:views="clr-namespace:crossproba.Views"
+       FlyoutHeaderBehavior="CollapseOnScroll">
 
-    <MenuItem 
-        Text="Обучающее приложение"/>
+    <ShellItem Route="task" Title="(задания и тесты)">
+        <ShellSection Title="(тесты)" Icon="questionmark.png">
+            <ShellContent ContentTemplate="{DataTemplate views:TaskPage}" />
+        </ShellSection>
+        <ShellSection Title="(доп.тесты?)" Icon="questionmark.png">
+            <ShellContent ContentTemplate="{DataTemplate views:TestsListPage}" />
+        </ShellSection>
+    </ShellItem>
 
-    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+    <ShellItem Route="leaderboard" Title="(Лидерборд?)" Icon="questionmark.png">
+        <ShellContent ContentTemplate="{DataTemplate views:LeaderboardPage}" />
+    </ShellItem>
 
-        <Tab Title="(задания и тесты)"
-             Icon="questionmark.png">
+    <ShellItem Route="settings" Title="(Настройки?)" Icon="questionmark.png">
+        <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
+    </ShellItem>
 
-            <ShellContent Title="(тесты)"
-                          Route="task"
-                          ContentTemplate="{DataTemplate views:TaskPage}" />
+    <ShellItem Route="account" Title="(Аккаунт?)" Icon="questionmark.png">
+        <ShellContent ContentTemplate="{DataTemplate views:AccountPage}" />
+    </ShellItem>
 
-            <ShellContent Title="(доп.тесты?)"
-                          Route="anothertask"
-                          ContentTemplate="{DataTemplate views:AnotherTaskPage}" />
-
-        </Tab>
-
-        <ShellContent Title="(Лидерборд?)"
-                      Icon="questionmark.png"
-                      Route="leaderboard"
-                      ContentTemplate="{DataTemplate views:LeaderboardPage}" />
-
-        <ShellContent Title="(Настройки?)"
-                      Icon="questionmark.png"
-                      Route="settings"
-                      ContentTemplate="{DataTemplate views:SettingsPage}" />
-
-        <ShellContent Title="(Аккаунт?)"
-                      Icon="questionmark.png"
-                      Route="account"
-                      ContentTemplate="{DataTemplate views:AccountPage}" />
-
-
-
-
-    </FlyoutItem>
 </Shell>

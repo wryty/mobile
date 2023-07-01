@@ -1,0 +1,40 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="crossproba.Views.TestPage"
+             Title="Тест">
+    <StackLayout>
+        <Label x:Name="questionLabel"
+               FontSize="Large"
+               TextColor="Black"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <ListView x:Name="answersListView"
+                  ItemsSource="{Binding Answers}"
+                  SelectedItem="{Binding SelectedAnswer}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" />
+                            <Label Text="{Binding Text}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ProgressBar x:Name="progressBar"
+                     Progress="{Binding Progress, Mode=TwoWay}"
+                     VerticalOptions="Center" />
+        <Button Text="Следующий вопрос"
+                Clicked="NextQuestionButtonClicked"
+                HorizontalOptions="Center"
+                IsEnabled="{Binding CanMoveToNextQuestion}" />
+
+        <Label Text="{Binding ResultMessage}"
+               FontSize="Large"
+               TextColor="Black"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+    </StackLayout>
+</ContentPage>

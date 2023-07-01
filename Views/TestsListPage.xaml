@@ -1,0 +1,17 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="crossproba.Views.TestsListPage"
+             Title="Список тестов">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Tests}"
+                      SelectedItem="{Binding SelectedTest}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" Tapped="OnTestTapped" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
