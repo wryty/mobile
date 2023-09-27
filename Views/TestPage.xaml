@@ -2,22 +2,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="crossproba.Views.TestPage"
              Title="Тест">
-    <StackLayout>
+    <ScrollView>
+    <StackLayout BackgroundColor="{Binding CurrentBackgroundColor}">
         <Label x:Name="questionLabel"
                FontSize="Large"
-               TextColor="Black"
+               TextColor="{AppThemeBinding Light=Black, Dark=White}"
                HorizontalOptions="Center"
-               VerticalOptions="Center" />
+               VerticalOptions="Center" 
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               />
 
         <ListView x:Name="answersListView"
                   ItemsSource="{Binding Answers}"
-                  SelectedItem="{Binding SelectedAnswer}">
+                  SelectedItem="{Binding SelectedAnswer}"
+                  HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="10">
                             <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" />
-                            <Label Text="{Binding Text}" />
+                            <Label Text="{Binding Text}" 
+                             TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="FillAndExpand"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="Small"
+                                   LineBreakMode="WordWrap"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
@@ -33,8 +45,12 @@
 
         <Label Text="{Binding ResultMessage}"
                FontSize="Large"
-               TextColor="Black"
                HorizontalOptions="Center"
-               VerticalOptions="Center" />
+               VerticalOptions="Center" 
+               TextColor="{AppThemeBinding Light=Black, Dark=White}"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+        
     </StackLayout>
+    </ScrollView>
 </ContentPage>

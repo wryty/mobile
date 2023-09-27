@@ -14,6 +14,9 @@ namespace crossproba.ViewModels
         private Answer selectedAnswer;
         private string resultMessage;
         private double progress;
+        
+
+
         public double Progress
         {
             get => progress;
@@ -23,6 +26,7 @@ namespace crossproba.ViewModels
                 OnPropertyChanged(nameof(Progress));
             }
         }
+
         public int CurrentQuestionIndex
         {
             get => currentQuestionIndex;
@@ -33,10 +37,12 @@ namespace crossproba.ViewModels
                 OnPropertyChanged(nameof(CanMoveToNextQuestion));
             }
         }
+
         private double CalculateProgress()
         {
             return (double)(CurrentQuestionIndex + 1) / test.Questions.Count;
         }
+
         public List<Answer> Answers
         {
             get => answers;
@@ -56,11 +62,18 @@ namespace crossproba.ViewModels
                 OnPropertyChanged(nameof(SelectedAnswer));
             }
         }
-
-        public bool CanMoveToNextQuestion => CurrentQuestionIndex < test.Questions.Count - 1;
+        private Color currentBackgroundColor;
+        public Color CurrentBackgroundColor
+        {
+            get { return currentBackgroundColor; }
+            set { currentBackgroundColor = value; }
+        }
+        bool papa = true;
+        public bool CanMoveToNextQuestion => CurrentQuestionIndex < test.Questions.Count && papa;
 
         public int CorrectAnswersCount { get; private set; }
         public int IncorrectAnswersCount { get; private set; }
+
         public bool IsTestCompleted => CurrentQuestionIndex >= test.Questions.Count - 1;
 
         public string ResultMessage
@@ -78,6 +91,8 @@ namespace crossproba.ViewModels
             this.test = test;
             Initialize();
             Progress = CalculateProgress();
+
+            CurrentBackgroundColor = test.Category == "Информационная безопасность" ? Color.FromArgb("#D6ACF6") : Color.FromArgb("#63D4A9");
         }
 
         private void Initialize()
@@ -99,23 +114,42 @@ namespace crossproba.ViewModels
         public void NextQuestion()
         {
             CheckAnswer();
-            CurrentQuestionIndex++;
 
-            if (!IsTestCompleted)
+            if (IsTestCompleted)
             {
+                SelectedAnswer = null;
+                papa = false;
+            }
+            else
+            {
+                CurrentQuestionIndex++;
                 LoadAnswers();
                 SelectedAnswer = null;
                 Progress = CalculateProgress();
             }
+            OnPropertyChanged(nameof(CanMoveToNextQuestion));
         }
 
         private void CheckAnswer()
         {
-            if (SelectedAnswer != null && SelectedAnswer.IsSelected && SelectedAnswer.IsCorrect)
+            var question = test.Questions[CurrentQuestionIndex];
+            var selectedAnswers = Answers.Where(a => a.IsSelected).ToList();
+
+            bool allCorrect = true;
+
+            foreach (var correctAnswerIndex in question.CorrectAnswers)
+            {
+                if (!selectedAnswers.Any(a => a == question.Options[correctAnswerIndex]))
+                {
+                    allCorrect = false;
+                    break;
+                }
+            }
+            if (allCorrect && selectedAnswers.Count == question.CorrectAnswers.Count)
             {
                 CorrectAnswersCount++;
             }
-            else if (SelectedAnswer != null && SelectedAnswer.IsSelected && !SelectedAnswer.IsCorrect)
+            else
             {
                 IncorrectAnswersCount++;
             }

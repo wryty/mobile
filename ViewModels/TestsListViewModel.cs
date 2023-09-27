@@ -1,4 +1,5 @@
-﻿using crossproba.Models;
+﻿
+using crossproba.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -7,11 +8,25 @@ namespace crossproba.ViewModels
 {
     public class TestsListViewModel : BaseViewModel
     {
+        private string category;
+        public string Category
+        {
+            get { return category; }
+            set { SetProperty(ref category, value); }
+        }
+
         private ObservableCollection<Test> tests;
         public ObservableCollection<Test> Tests
         {
             get { return tests; }
             set { SetProperty(ref tests, value); }
+        }
+
+        private Color currentBackgroundColor;
+        public Color CurrentBackgroundColor
+        {
+            get { return currentBackgroundColor; }
+            set { SetProperty(ref currentBackgroundColor, value); }
         }
 
         private Test selectedTest;
@@ -23,13 +38,15 @@ namespace crossproba.ViewModels
 
         public ICommand TestSelectedCommand { get; }
 
-        public TestsListViewModel()
+        public TestsListViewModel(string categoryv)
         {
+            Category = categoryv;
+
+            CurrentBackgroundColor = Category == "Информационная безопасность" ? Color.FromArgb("#D6ACF6") : Color.FromArgb("#63D4A9");
             InitializeTests();
 
             TestSelectedCommand = new Command(OnTestSelected);
         }
-
         private async void OnTestSelected()
         {
             if (SelectedTest != null)
@@ -39,254 +56,587 @@ namespace crossproba.ViewModels
             }
         }
 
-        private void InitializeTests()
+        private async void InitializeTests()
         {
-            Tests = new ObservableCollection<Test>()
+            var filteredTests = new ObservableCollection<Test>()
             {
-                new Test("Тест 1", new List<Question>
+            new Test("Кейс 1", new List<Question>
+            {
+                new Question
                 {
-                    new Question
+                    Text = "Психологу школы за советом обратился ученик 8 класса. Ученик рассказал, что около двух недель назад по электронной почте он получил приглашение от своего друга поиграть в Интернет-игру, доступ к которой открывается по прикрепленной ссылке. Перейдя по указанной в письме ссылке, ученик в появившемся окне подтвердил свое участие, нажав какую-то кнопку. Игра оказалась очень увлекательной, но спустя день на электронную почту пришло письмо с незнакомого адреса с требованием оплаты участия. Ученик его проигнорировал, однако письма стали появляться каждый день и содержать угрозы благополучию его семьи. Со слов ученика он должен уже около 100000 рублей. Родителям рассказать боится. \n Как нужно было поступить ученику, когда он получил письмо по электронной почте что бы не столкнуться с данной ситуацией?",
+                    Options = new List<Answer>
                     {
-                        Text = "Вопрос 1",
-                        Options = new List<Answer>
+                        new Answer
                         {
-                            new Answer
-                            {
-                                Text = "Вариант 1",
-                                IsSelected = false,
-                                IsCorrect = true
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 2",
-                                IsSelected = false,
-                                IsCorrect = false
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 3",
-                                IsSelected = false,
-                                IsCorrect = false
-                            }
+                            Text = "Показать родителям.",
+                            IsSelected = false,
+                            IsCorrect = true
                         },
-                        CorrectAnswers = new List<int> { 0 }
+                        new Answer
+                        {
+                            Text = "Игнорировать дальше, не сказав об этом родителям.",
+                            IsSelected = false,
+                            IsCorrect = false
+                        },
+                        new Answer
+                        {
+                            Text = "Ничего из перечисленного.",
+                            IsSelected = false,
+                            IsCorrect = false
+                        }
                     },
-                    new Question
-                    {
-                        Text = "Вопрос 2",
-                        Options = new List<Answer>
-                        {
-                            new Answer
-                            {
-                                Text = "Вариант 1",
-                                IsSelected = false,
-                                IsCorrect = false
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 2",
-                                IsSelected = false,
-                                IsCorrect = true
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 3",
-                                IsSelected = false,
-                                IsCorrect = false
-                            }
-                        },
-                        CorrectAnswers = new List<int> { 1 }
-                    },
-                    new Question
-                    {
-                        Text = "Вопрос 3",
-                        Options = new List<Answer>
-                        {
-                            new Answer
-                            {
-                                Text = "Вариант 1",
-                                IsSelected = false,
-                                IsCorrect = false
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 2",
-                                IsSelected = false,
-                                IsCorrect = false
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 3",
-                                IsSelected = false,
-                                IsCorrect = true
-                            }
-                        },
-                        CorrectAnswers = new List<int> { 2 }
-                    }
-                }),
-                new Test("Тест 2", new List<Question>
+                    CorrectAnswers = new List<int> { 0 }
+                }
+                }, "Информационная безопасность"),
+                new Test("Кейс 2", new List<Question>
+    {
+        new Question
+        {
+            Text = "Катя очень любит помогать нуждающимся людям. Один раз она получила смс о проведении благотворительной акции с просьбой отправить смс или позвонить на короткий номер, чтобы пожертвовать небольшую сумму на благотворительность. \n Как следует Кате поступить?",
+            Options = new List<Answer>
+            {
+                new Answer
                 {
-                    new Question
-                    {
-                        Text = "Вопрос 1",
-                        Options = new List<Answer>
-                        {
-                            new Answer
-                            {
-                                Text = "Вариант 1",
-                                IsSelected = false,
-                                IsCorrect = false
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 2",
-                                IsSelected = false,
-                                IsCorrect = true
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 3",
-                                IsSelected = false,
-                                IsCorrect = false
-                            }
-                        },
-                        CorrectAnswers = new List<int> { 1 }
-                    },
-                    new Question
-                    {
-                        Text = "Вопрос 2",
-                        Options = new List<Answer>
-                        {
-                            new Answer
-                            {
-                                Text = "Вариант 1",
-                                IsSelected = false,
-                                IsCorrect = true
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 2",
-                                IsSelected = false,
-                                IsCorrect = false
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 3",
-                                IsSelected = false,
-                                IsCorrect = false
-                            }
-                        },
-                        CorrectAnswers = new List<int> { 0 }
-                    },
-                    new Question
-                    {
-                        Text = "Вопрос 3",
-                        Options = new List<Answer>
-                        {
-                            new Answer
-                            {
-                                Text = "Вариант 1",
-                                IsSelected = false,
-                                IsCorrect = false
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 2",
-                                IsSelected = false,
-                                IsCorrect = false
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 3",
-                                IsSelected = false,
-                                IsCorrect = true
-                            }
-                        },
-                        CorrectAnswers = new List<int> { 2 }
-                    },
-                    new Question
-                    {
-                        Text = "Вопрос 4",
-                        Options = new List<Answer>
-                        {
-                            new Answer
-                            {
-                                Text = "Вариант 1",
-                                IsSelected = false,
-                                IsCorrect = false
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 2",
-                                IsSelected = false,
-                                IsCorrect = true
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 3",
-                                IsSelected = false,
-                                IsCorrect = false
-                            }
-                        },
-                        CorrectAnswers = new List<int> { 1 }
-                    }
-                }),
-                new Test("Тест 3", new List<Question>
+                    Text = "Попытаться узнать об этой акции в интернете.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
                 {
-                    new Question
-                    {
-                        Text = "Вопрос 1",
-                        Options = new List<Answer>
-                        {
-                            new Answer
-                            {
-                                Text = "Вариант 1",
-                                IsSelected = false,
-                                IsCorrect = true
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 2",
-                                IsSelected = false,
-                                IsCorrect = false
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 3",
-                                IsSelected = false,
-                                IsCorrect = false
-                            }
-                        },
-                        CorrectAnswers = new List<int> { 0 }
-                    },
-                    new Question
-                    {
-                        Text = "Вопрос 2",
-                        Options = new List<Answer>
-                        {
-                            new Answer
-                            {
-                                Text = "Вариант 1",
-                                IsSelected = false,
-                                IsCorrect = false
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 2",
-                                IsSelected = false,
-                                IsCorrect = true
-                            },
-                            new Answer
-                            {
-                                Text = "Вариант 3",
-                                IsSelected = false,
-                                IsCorrect = false
-                            }
-                        },
-                        CorrectAnswers = new List<int> { 1 }
-                    }
-                })
-            };
+                    Text = "Не переходите по ссылкам в сообщениям с неизвестных номеров!",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Сделаете как написано в сообщении.",
+                    IsSelected = false,
+                    IsCorrect = false
+                }
+            },
+            CorrectAnswers = new List<int> { 1 }
+        }
+    }, "Информационная безопасность"),
+                new Test("Кейс 3", new List<Question>
+    {
+        new Question
+        {
+            Text = "Бабушка Тоня пожилой человек и независимо в свой возраст любит участвовать в различных играх. Однажды, ее позвонили на телефон и радостно сообщили: «Вам звонят с радиостанции «Русское Радио»! Поздравляем! Вы стали нашим победителем в игре совместно с Билайном! Вы выиграли ноутбук! -Вы готовы получить приз?-Конечно! Как раз будет подарок внуку на день рождение.«В этом случае Вам надо купить очень быстро, в течение часа, 2 карты экспресс-оплаты Билайн номиналом 1000 рублей, позвонить по номеру*******. Мы Вас соединим с оператором, Вы сообщите номера этих карт, мы их активируем на Ваш номер телефона(это непременное условие Билайна).И ноутбук будет Вашим! » \n Как следует поступить бабушке Тоне?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Сделать как просит оператор.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Ничего не предпринимать и заниматься дальше своими делами.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Сделать как просит оператор, но и предложить поучаствовать знакомым в этом конкурсе.",
+                    IsSelected = false,
+                    IsCorrect = false
+                }
+            },
+            CorrectAnswers = new List<int> { 1 }
+        }
+    }, "Информационная безопасность"),
+                new Test("Кейс 4", new List<Question>
+    {
+        new Question
+        {
+            Text = "Мама Даши в последнее время плохо с финансами и она не знала что делать. Ближе к обеду Даша получила по электронной почте письмо, в котором сотрудник какого-то банка на английском языке сообщает потрясающую новость: Смирнова Ирина, Ваша мама, должна получить наследство. В Африке умер ее дальний родственник, одинокий миллионер Джон Смирнов. Его адвокат стал разыскивать родственников и после долгих поисков нашел.В результате непродолжительной переписки «наследнице» предложили оплатить «накладные расходы» и ожидать перевода наследства на ее счет. \n Что следует сделать в таком случае?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Игнорировать подобные письмо.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Сделать все как просят в письме..",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Заявить в полицию.",
+                    IsSelected = false,
+                    IsCorrect = true
+                }
+            },
+            CorrectAnswers = new List<int> { 0,2 }
+        }
+    }, "Информационная безопасность"),
+                new Test("Кейс 5", new List<Question>
+    {
+        new Question
+        {
+            Text = "Аня студентка техникума, решила пойти на вечеринку к приятелю. На вечеринке у приятеля Аня познакомились с очень активным молодым человеком Александром. Он молодой и у него есть уже своя машина, немалые наличные деньги. Александр занимается распространением какого-то бальзама для спортсменов. По очень выгодной и высокой цене. (Но дешевле, чем аналоги в Интернете!) Он предлагает Ане заняться тем же. -Ведь Вам нужны наличные деньги? Сколько можно просить у родителей?-Вам, надо подумать. Деньги у Вас есть, но совсем немного.Аня сразу обменялась с телефоном Александра.Через пару дней неожиданно ваш новый друг, Никита, сообщает, что хотел бы купить именно это бальзам! И готов заплатить за него сумму в 2 раза большую, чем просит Александр. И не только он. У него много друзей-спортсменов, которым это товар необходим.Вы решаетесь выступить в роли продавца. Созваниваетесь с Александром, покупаете несколько банок этого бальзама.Но Никита на звонки не отвечает. Также как и Александр. \n Почему?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Он обманул вас.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Он был занят.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Сменил номер.",
+                    IsSelected = false,
+                    IsCorrect = false
+                }
+            },
+            CorrectAnswers = new List<int> { 0 }
+        }
+    }, "Информационная безопасность"),
+                new Test("Кейс 6", new List<Question>
+    {
+        new Question
+        {
+            Text = "Аня блогер и активно ведет свою жизнь в социальных сетях, обнаружила, что кто-то взломал ее аккаунт, разместил на стене неприличные изображения и стал рассылать оскорбления ее друзьям в личной переписке. Аня восстановила доступ к аккаунту и поменяла пароль, но уже было поздно. Многие удалили ее из друзей и добавили в черный список, а кто-то даже перестал разговаривать в школе. \n Что следует сделать Ане для того, чтобы восстановить свою репутацию?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Рассказать правду и попытаться исправить всю ситуацию.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Выложать на своей странице историю с извинением.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Ничего не предпринимать.",
+                    IsSelected = false,
+                    IsCorrect = false
+                }
+            },
+            CorrectAnswers = new List<int> { 0 }
+        }
+    }, "Информационная безопасность"),
+                new Test("Кейс 7", new List<Question>
+    {
+        new Question
+        {
+            Text = "Кирилл занятой человек и чтобы не тратить много времени на пароли и легче запомнить он установил везде один и тот аккаунтов. \n Какие требования к безопасности пароля существуют?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Цифры и буквы",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Строчные и прописные буквы, не буквенные символы, цифры.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Строчные и прописные буквы и цифры.",
+                    IsSelected = false,
+                    IsCorrect = false
+                }
+            },
+            CorrectAnswers = new List<int> { 2 }
+        }
+    }, "Информационная безопасность"),
+                new Test("Кейс 8", new List<Question>
+    {
+        new Question
+        {
+            Text = "Маша подросток, которая очень любит сидеть в сайтах для знакомств. Совсем недавно в интернете Маша познакомился с ровесником. Вам понравилось общаться друг -другом и вы стали делиться своими тайнами. Но однажды вы поссорились, и твой интернет-друг пообещал, что отправит всем твоим друзьям фотографии личного характера, которые ты ему отправляла. Маше бы не хотелось, чтобы эти фотографии видели твои друзья. Какими будут действия Маши?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Не предпринимать ничего.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Подать заявление в полицейский участок.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Удалить все фотографии из сообщений.",
+                    IsSelected = false,
+                    IsCorrect = true
+                }
+            },
+            CorrectAnswers = new List<int> { 2 }
+        }
+    }, "Информационная безопасность"),
+                new Test("Кейс 9", new List<Question>
+    {
+        new Question
+        {
+            Text = "Лена пришла на день рождение своей подруги, которая очень любит читать книги о романтике, хочет подарить ей книгу. Она искала нужную книгу в интернете, нашла и решили оформить заказ, но тут возник баннер, заблокировавшийся на весь экран, с надписью Microsoft Security. На баннере также написано, что необходимо пополнить счет, отправив СМС на номер ****, чтобы получить код разблокировки. Стоимость СМС -600 рублей. \n Что нужно сделать, чтобы больше не попадать в такие неприятные ситуации?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Не заходить на незнакомые сайты.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Не реагировать на рекламу.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Ничего не предпринимать.",
+                    IsSelected = false,
+                    IsCorrect = false
+                }
+            },
+            CorrectAnswers = new List<int> { 0,1 }
+        }
+    }, "Информационная безопасность"),
+                new Test("Кейс 10", new List<Question>
+    {
+        new Question
+        {
+            Text = "Петя Иванов живет в городе Чебоксары. Он решил завести аквариум, и его интересует любая информация по данной теме. Петя захотел узнать все об аквариумах, в том числе, где их можно купить в его городе и сколько они стоят. На первый взгляд, самое простое — это поиск по слову «аквариум». Такой вариант и выбрал Петя — он задал ключевое слово «аквариум» в поисковой системе «Яндекс». Результатом поиска явилось огромное количество страниц. Причем среди них оказались сайты, упоминающие группу Бориса Гребенщикова «Аквариум», торговые центры и неформальные объединения с таким же названием, и многое другое, не имеющее отношения ни к аквариумам, ни к аквариумным рыбкам. Нетрудно догадаться, что такой поиск не может удовлетворить даже непритязательного пользователя. Слишком много времени придется потратить на то, чтобы отобрать среди всех предложенных документов те, которые касаются нужного предмета, и уж тем более на то, чтобы ознакомиться с их содержимым. \n Как задать запрос поиска, чтобы быстро найти информацию?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Увеличить размер запроса.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Укоротить запрос.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Ничего не менять.",
+                    IsSelected = false,
+                    IsCorrect = false
+                }
+            },
+            CorrectAnswers = new List<int> { 1 }
+        }
+    }, "Информационная безопасность"),
+
+                new Test("Кейс 1", new List<Question>
+    {
+        new Question
+        {
+            Text = "Мошенники установили на банкомат накладку, которая позволяла считывать магнитную полосу на карте. На клавиатуру установили фальшпанель, позволяюшую записывать PIN-код. Последний случай принес злоумышленнику около 17 тыс. руб. Владелец карты неосторожно использовал ее для снятия средств в крупном торговом центре. Позже выяснилось, что мошенник приобрел оборудование, называемое скиммером, на Dark Net. Мошенническая техника, где используется скиммер, называется скиммингом.В распоряжении злоумышленников оказывалась запись содержимого магнитной ленты и PIN-код. Они создали дубликат карты и с его помощью через банкомат снимали деньги. Сейчас все банковские карты содержат микрочип, но даже на современных присутствует магнитная полоса. \n Как не стать жертвой скимминга?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Попытатся другим способом снять наличные.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Снимать наличные внутри банка с сотрудником.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Выбирать проверенные банкоматы для снятия наличных.",
+                    IsSelected = false,
+                    IsCorrect = true
+                }
+            },
+            CorrectAnswers = new List<int> { 0,1,2 }
+        }
+    }, "Банковская безопасность"),
+                 new Test("Кейс 2", new List<Question>
+    {
+        new Question
+        {
+            Text = "Настя часто путешествует и что бы знать погоду в том месте  регулярно пользуется мобильным интернет-банкингом, скачала приложение астрологического прогноза. При установке пользователь разрешил приложению доступ к считыванию сообщений. В результате приложение запросило доступ к покупке подписки в 14 тыс. руб. и автоматически считало код подтверждения об оплате, пришедший в SMS. \n Как можно обезопасить Настю от угроз при использовании интернет-банкинга?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Установить мобильный антивирус.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Запретить установку приложения из непроверенных источников.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Разрешать приложению совершать платежи согласно шаблону.",
+                    IsSelected = false,
+                    IsCorrect = false
+                }
+            },
+            CorrectAnswers = new List<int> { 0,1 }
+        }
+    }, "Банковская безопасность"),
+                 new Test("Кейс 3", new List<Question>
+    {
+        new Question
+        {
+            Text = "Василий Иванович, выдающаяся личность, обедал в ресторане вместе со своим партнером Петром Исаевым. Когда официант представил счет на сумму 2600 рублей, Василий Иванович решил оплатить его с использованием своей банковской карты. Официант принес портативный терминал для оплаты. Василий Иванович вставил свою карту и ввел PIN-код. Однако официант сообщил, что оплата не удалась из-за проблем с связью, и попросил Василия Ивановича ввести PIN-код еще раз. Василий Иванович, не подозревая обмана, выполнил эту просьбу. Когда он поднялся из-за стола, чтобы уйти, он обнаружил в своем мобильном телефоне два одинаковых SMS-сообщения о списании 2600 рублей, полученные с интервалом в одну минуту. \n Может ли Василий Иванович потребовать возврата денег от ресторана?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Да, так как он выплатил двойной размер суммы.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Нет, так как он не был внимательным.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Да, но для этого надо будет обратится в банк.",
+                    IsSelected = false,
+                    IsCorrect = true
+                }
+            },
+            CorrectAnswers = new List<int> { 2 }
+        }
+    }, "Банковская безопасность"),
+                 new Test("Кейс 4", new List<Question>
+    {
+        new Question
+        {
+            Text = "Шестой год Оксана Владимировна тщательно откладывала деньги на свою будущую дачу. Однажды она посетила крупный магазин спорттоваров в торговом центре, чтобы выбрать пару кроссовок. В момент, когда она примеряла кроссовки, ей, к сожалению, пришлось столкнуться с неприятным инцидентом.\r\n\r\nОксана случайно выпустила свою сумку из-под контроля, и злоумышленники воспользовались этой ситуацией, чтобы вытащить ее кошелек. В кошельке находились небольшие наличные деньги и банковская карта.\r\n\r\nОксана заметила пропажу и сразу подняла шум. Она попросила помощи у продавцов в магазине, но, к сожалению, кошелек не был найден, и никаких подозрительных личностей в магазине не было замечено.\r\n\r\nОксана немедленно отправилась в отделение банка, которое находилось в том же торговом центре. Она заблокировала свою банковскую карту и сообщила о случившемся. Через неделю ей была выдана новая карта, и деньги с ее счета не были списаны. \n Как можно защититься от последствий кражи банковской карты?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Быть доверчивым к окружающим людям.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Хранить все деньги в банковской карте.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Хорошо следить за своими вещами.",
+                    IsSelected = false,
+                    IsCorrect = true
+                }
+            },
+            CorrectAnswers = new List<int> { 2 }
+        }
+    }, "Банковская безопасность"),
+                 new Test("Кейс 5", new List<Question>
+    {
+        new Question
+        {
+            Text = "Анна, опытный мастер по маникюру, часто использовала свою дебетовую карту для оплаты товаров и услуг, а также для снятия наличных денег, включая использование уличных банкоматов. Однако одной ночью, когда она находилась дома, она получила SMS-уведомление о крупной сумме, снятой с ее карточного счета через банкомат.\r\n\r\nАнна немедленно проверила наличие своей карты и обнаружила, что она находится в ее сумочке. \n Как стало возможно списание денег со счета?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Она случайно передала данные третьей стороне.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Данные ее карты были полученны с помощью скиммера.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Ошибка банкомата.",
+                    IsSelected = false,
+                    IsCorrect = false
+                }
+            },
+            CorrectAnswers = new List<int> { 1 }
+        }
+    }, "Банковская безопасность"),
+                 new Test("Кейс 6", new List<Question>
+    {
+        new Question
+        {
+            Text = "На корреспондентский счет российского банка в течение трех месяцев поступали целенаправленные атаки. Это произошло из-за поверхностного соблюдения мер безопасности при работе с платежной системой Банка России. Банковские сотрудники в рабочем режиме нарушили требования регулятора по ИБ, что повлекло за собой уязвимость системы безопасности. В систему был внедрен программный агент за счет применения метода социальной инженерии. В результате этой атаки было выведено более 15 млрд. \n Как можно было бы избежать такой ситуации?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Обеспечить требования об изоляции сегмента АРМ КБР (Н).",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Внедрить сертифицированный ФСБ межсетевого экрана.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Регулярно обновлять СКАД Сигнатуру.",
+                    IsSelected = false,
+                    IsCorrect = true
+                }
+            },
+            CorrectAnswers = new List<int> { 2 }
+        }
+    }, "Банковская безопасность"),
+                 new Test("Кейс 7", new List<Question>
+    {
+        new Question
+        {
+            Text = "Костя очень сильно хотел завести себе карту и на совершеннолетие родители подарили банковскую дебетовую карту. Вдруг на телефон Косте приходит смс: «Уважаемый клиент! Ваша карта заблокирована, была попытка несанкционированного снятия денег. Для возобновления пользования счетом сообщите по телефону******* данные по Вашей карте: № и PIN-код. В ближайшее время вопрос будет решён. Банк России.» \n Можно ли доверять информацию о карте незнакомым сообщениям? ",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Да.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Нет",
+                    IsSelected = false,
+                    IsCorrect = false
+                }
+            },
+            CorrectAnswers = new List<int> { 1 }
+        }
+    }, "Банковская безопасность"),
+                 new Test("Кейс 8", new List<Question>
+    {
+        new Question
+        {
+            Text = "Наталья ученица десятого класса, и для того, чтобы иметь свои собственные карманные деньги, она решила немного подзаработать. Она долго искала различные объявления в Интернете и наткнулась на вакансию наборщик текста с зарплатой 120 рублей за одну страницу. Но обязательное условие – взнос, на тот случай если Наталья не успеет сделать заказ в срок, и заказчик не получит результат. \n Как следует поступить Наталье в данной ситуации, стоит ли ей соглашаться на эти условия?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Да, если она сможет выполнять условия.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Нет, не стоит. Это может быть мошеннической схемой",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Да, стоит попробовать.",
+                    IsSelected = false,
+                    IsCorrect = true
+                }
+            },
+            CorrectAnswers = new List<int> { 1 }
+        }
+    }, "Банковская безопасность"),
+                 new Test("Кейс 9", new List<Question>
+    {
+        new Question
+        {
+            Text = "У пенсионера Ивана Михайловича за несколько лет накопилась приличная сумма денег. У Ивана Михайловича есть участок, деньги накопил от продажи овощей на рынке. Недавно он продал свой домик в деревне и переехал жить в город. На вырученные деньги пенсионер приобрел однокомнатную квартиру на первом этаже. Оставшиеся сбережения Иван Михайлович держал дома. Однажды, когда он пошел в магазин, к нему забрались грабители. Тайник они найти не успели, так как вернувшийся хозяин квартиры их спугнул, они сбежали, выпрыгнув в окно. Случившееся, конечно, сильно расстроило Ивана Михайловича и заставило сомневаться в надежности подобного способа хранения своих накоплений. \n Как следовало поступить Ивану Михайловичу при решении вопроса хранении денег?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Пойти в банки и открыть накопительный счет.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Дальше продолжать хранить деньги дома.",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Отдать деньги в приют для нуждающимся.",
+                    IsSelected = false,
+                    IsCorrect = false
+                }
+            },
+            CorrectAnswers = new List<int> { 0 }
+        }
+    }, "Банковская безопасность"),
+                 new Test("Кейс 10", new List<Question>
+    {
+        new Question
+        {
+            Text = "Скоро день рождение у мамы Карины , и вы с братом решили подарить ей кофемашину. Но для начала решили изучить различные предложения в интернет-магазинах. Для этого вы зашли на Яндекс Маркет и выбрали интернет-магазин Техника.ру (цена на данном сайте была ниже, чем у других конкурентов). У вас с братом завязался спор – он утверждал, то покупать в интернет-магазине небезопасно. - Не переживай (ответили Вы), я познакомился с отзывами магазина, на сайте есть вся необходимая контактная информация, реквизиты. А главное, можно выбрать способ оплаты – онлайн-оплата или оплата при получении. Брат пытался отговорить Вас от покупки, но в итоге Вы все-таки сошлись на мнении, что финансовая выгода важнее и сделали заказ по интернету. \n На что нужно обращать внимание, совершая интернет-покупки?",
+            Options = new List<Answer>
+            {
+                new Answer
+                {
+                    Text = "Быстрая и дешевая доставка",
+                    IsSelected = false,
+                    IsCorrect = false
+                },
+                new Answer
+                {
+                    Text = "Наличие отзывов.",
+                    IsSelected = false,
+                    IsCorrect = true
+                },
+                new Answer
+                {
+                    Text = "Огранниченное количество товара",
+                    IsSelected = false,
+                    IsCorrect = false
+                }
+            },
+            CorrectAnswers = new List<int> { 2 }
+        }
+    }, "Банковская безопасность"),
+            }.Where(test => test.Category == Category);
+            Tests = new(filteredTests);
         }
     }
 }

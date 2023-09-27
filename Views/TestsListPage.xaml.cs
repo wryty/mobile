@@ -5,18 +5,31 @@ namespace crossproba.Views
 {
     public partial class TestsListPage : ContentPage
     {
-        public TestsListPage()
+        public string Category { get; set; }
+        public TestsListPage(string category)
         {
+            Category = category;
             InitializeComponent();
-            BindingContext = new TestsListViewModel();
+            BindingContext = new TestsListViewModel(category);
+        }
+        private async void OnTestTapped(object sender, SelectionChangedEventArgs e)
+        {
+           await Navigation.PushAsync(new TestPage(e.CurrentSelection.FirstOrDefault() as Test));
         }
 
-        private async void OnTestTapped(object sender, System.EventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
         {
-            if (sender is TextCell textCell && textCell.BindingContext is Test selectedTest)
+            Page lessonPage;
+            if (Category == "Информационная безопасность")
             {
-                await Navigation.PushAsync(new TestPage(selectedTest));
+                lessonPage = new LessonIS();
             }
+            else
+            {
+                lessonPage = new LessonBS();
+            }
+
+            await Navigation.PushAsync(lessonPage);
         }
     }
 }

@@ -6,11 +6,13 @@ namespace crossproba.Models
     {
         public string Name { get; set; }
         public List<Question> Questions { get; set; }
+        public string Category { get; set; }
 
-        public Test(string name, List<Question> questions)
+        public Test(string name, List<Question> questions, string category)
         {
             Name = name;
             Questions = questions;
+            Category = category; 
         }
     }
 

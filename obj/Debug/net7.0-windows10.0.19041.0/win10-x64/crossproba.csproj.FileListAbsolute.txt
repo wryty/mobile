@@ -543,7 +543,6 @@ C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\cre
 C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hostfxr.dll
 C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hostpolicy.dll
 C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore.dll
-C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_7.0.523.17405.dll
 C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordbi.dll
 C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscorrc.dll
 C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\msquic.dll
@@ -651,3 +650,15 @@ C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qua
 C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
+C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
+C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\System.Speech.dll
+C:\Users\wryty\Desktop\mobile\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_7.0.923.32018.dll
+C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashscreenSplashScreen.scale-100.png
+C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashscreenSplashScreen.scale-125.png
+C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashscreenSplashScreen.scale-150.png
+C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashscreenSplashScreen.scale-200.png
+C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashscreenSplashScreen.scale-400.png
+C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\account.scale-100.png
+C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\learning.scale-100.png
+C:\Users\wryty\Desktop\mobile\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\settings.scale-100.png

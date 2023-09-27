@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="crossproba.Views.AboutPage"
+             Title="О программе"
+             BackgroundColor="#9DC0D0">
+    <ScrollView>
+        <StackLayout 
+            x:Name="aboutPageStackLayout"
+            Spacing="20"
+            Padding="16,20"
+            VerticalOptions="Center">
+            <!-- Заголовок статьи -->
+            <Label Text="Актуальность кибербезопасности"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#007acc"
+                   Margin="0,0,0,16" />
+
+            <!-- Текст статьи -->
+            <Label Text="Зачем нужна кибербезопасность? Киберпреступники нацеливаются на личную информацию пользователей — имена, адреса, национальные идентификационные номера и информацию о кредитной карте — и затем продают эти записи на подпольных цифровых рынках. Это часто приводит к потере доверия клиентов, наложению штрафов со стороны регулирующих органов и даже к судебным искам. Кибербезопасность нацелена на то, чтобы подобные случаи предотвращать и наказывать киберпреступников."
+                   FontSize="20"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,16" />
+
+            <!-- Список важных пунктов -->
+            <Label Text="Где используется кибербезопасность?"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#007acc"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Безопасность критической инфраструктуры — методы защиты компьютерных систем, сетей и других активов, от которых зависит национальная безопасность, экономическое благополучие и / или общественная безопасность."
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Сетевую безопасность — меры безопасности для защиты компьютерной сети от злоумышленников, включая как проводные, так и беспроводные (Wi-Fi) соединения."
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Безопасность приложений — процессы, помогающие защитить приложения, работающие локально и в облаке."
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Облачную безопасность, в частности настоящие конфиденциальные вычисления, которые шифруют облачные данные в состоянии покоя (в хранилище), в движении (по мере их перемещения в облако, из него и внутри облака) и при использовании (во время обработки) для обеспечения конфиденциальности клиентов, бизнес-требований и соблюдения нормативных требований."
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Информационную безопасность — меры по защите любой информации."
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Аварийное восстановление / планирование непрерывности бизнеса — инструменты и процедуры для реагирования на незапланированные события, такие как стихийные бедствия, перебои в подаче электроэнергии или инциденты кибербезопасности, с минимальным нарушением основных операций."
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Безопасность хранения — включает в себя шифрование и неизменяемые и изолированные копии данных."
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Мобильную безопасность — безопасность данных, хранящихся на мобильных устройствах."
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,16" />
+
+            <!-- Список киберугроз -->
+            <Label Text="К основным киберугрозам относят:"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#007acc"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Вредоносное ПО;"
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Программы-вымогатели;"
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Фишинг;"
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Внутренние угрозы;"
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Распределенные атаки типа «отказ в обслуживании» (DDoS);"
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Расширенные постоянные угрозы (APT);"
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,8" />
+
+            <Label Text="• Атака с прослушиванием."
+                   FontSize="18"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,16" />
+
+            <Label Text="Из этого можно сделать вывод, что кибербезопасность касается каждого человека и компании, которые используют интернет-технологии."
+                   FontSize="20"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,0" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -10,17 +10,14 @@ public partial class AppShell : Shell
     public AppShell()
 	{
 		InitializeComponent();
-		RegisterRoutes();
+		//RegisterRoutes();
 	}
 
 
     void RegisterRoutes()
     {
-        Routes.Add("task", typeof(TaskPage));
-        Routes.Add("anothertask", typeof(AnotherTaskPage));
-        Routes.Add("leaderboard", typeof(LeaderboardPage));
-        Routes.Add("settings", typeof(SettingsPage));
-        Routes.Add("account", typeof(AccountPage));
+        Routes.Add("task", typeof(MainTestPage));
+        Routes.Add("about", typeof(AboutPage));
 
         foreach (var item in Routes)
         {

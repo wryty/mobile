@@ -1,17 +1,40 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="crossproba.Views.TestsListPage"
-             Title="Список тестов">
+             Title="Список тестов"
+             BackgroundColor="{Binding CurrentBackgroundColor}">
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" 
+                                        Value="#2C0B98" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
         <StackLayout>
-            <ListView ItemsSource="{Binding Tests}"
-                      SelectedItem="{Binding SelectedTest}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Text="{Binding Name}" Tapped="OnTestTapped" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <CollectionView ItemsSource="{Binding Tests}"
+                      ItemTemplate="{StaticResource TestTemplate}"
+                      SelectionChanged="OnTestTapped"
+                      SelectionMode="Single"
+                      >
+            </CollectionView>
+            <Frame CornerRadius="100" BackgroundColor="#2C0B98" Padding="20" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="ТЕОРИЯ" HorizontalOptions="Center" VerticalOptions="Center" FontFamily="PatsySans"/>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

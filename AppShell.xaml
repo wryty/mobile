@@ -3,27 +3,32 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:crossproba"
        xmlns:views="clr-namespace:crossproba.Views"
-       FlyoutHeaderBehavior="CollapseOnScroll">
+       FlyoutHeaderBehavior="CollapseOnScroll"
+       Style="{StaticResource ShellStyle}"
+       FlyoutBackgroundColor="#1B1B1B"
+       BackgroundColor="#2C0B98"
+       xmlns:controls ="clr-namespace:crossproba.Controls"
+       >
 
-    <ShellItem Route="task" Title="(задания и тесты)">
-        <ShellSection Title="(тесты)" Icon="questionmark.png">
-            <ShellContent ContentTemplate="{DataTemplate views:TaskPage}" />
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHeader />
+    </Shell.FlyoutHeader>
+
+
+    <ShellItem Route="task" Title="Главная" Icon="{AppThemeBinding Light=main_light.svg, Dark=main_dark.svg}">
+        <ShellSection Title="Кейсы" Icon="{AppThemeBinding Light=cases_light.svg, Dark=cases_dark.svg}">
+            <ShellContent ContentTemplate="{DataTemplate views:MainTestPage}"/>
         </ShellSection>
-        <ShellSection Title="(доп.тесты?)" Icon="questionmark.png">
-            <ShellContent ContentTemplate="{DataTemplate views:TestsListPage}" />
+        <ShellSection Title="Статистика" Icon="{AppThemeBinding Light=stats_light.svg, Dark=stats_dark.svg}">
+            <ShellContent ContentTemplate="{DataTemplate views:StatsPage}" />
         </ShellSection>
     </ShellItem>
 
-    <ShellItem Route="leaderboard" Title="(Лидерборд?)" Icon="questionmark.png">
-        <ShellContent ContentTemplate="{DataTemplate views:LeaderboardPage}" />
+    <ShellItem Route="about" Title="О приложении" Icon="{AppThemeBinding Light=about_light.svg, Dark=about_dark.svg}">
+        <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" />
     </ShellItem>
 
-    <ShellItem Route="settings" Title="(Настройки?)" Icon="questionmark.png">
-        <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
-    </ShellItem>
-
-    <ShellItem Route="account" Title="(Аккаунт?)" Icon="questionmark.png">
-        <ShellContent ContentTemplate="{DataTemplate views:AccountPage}" />
-    </ShellItem>
-
+    <Shell.FlyoutFooter>
+        <controls:FlyoutFooter />
+    </Shell.FlyoutFooter>
 </Shell>

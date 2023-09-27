@@ -8,7 +8,7 @@ namespace crossproba.Views
     {
         private Test test;
         private TestViewModel viewModel;
-
+        static public StatsPage statsPage { get; set; }
         public TestPage(Test test)
         {
             InitializeComponent();
@@ -26,20 +26,22 @@ namespace crossproba.Views
 
         private void NextQuestionButtonClicked(object sender, System.EventArgs e)
         {
-            viewModel.NextQuestion();
-            ShowCurrentQuestion();
 
-            if (viewModel.IsTestCompleted)
+            viewModel.NextQuestion();
+            if (viewModel.IsTestCompleted && !viewModel.CanMoveToNextQuestion)
             {
                 DisplayResult();
                 progressBar.ProgressTo(1, 250, Easing.Linear);
             }
+            ShowCurrentQuestion();
         }
 
         private void DisplayResult()
         {
             var resultMessage = $"Правильных ответов: {viewModel.CorrectAnswersCount}\nНеправильных ответов: {viewModel.IncorrectAnswersCount}";
             viewModel.ResultMessage = resultMessage;
+            if (viewModel.IncorrectAnswersCount == 0) StatsPage.CompletedTests++; else StatsPage.FailedTests++;
+            if (statsPage != null) statsPage.UpdateCount();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
