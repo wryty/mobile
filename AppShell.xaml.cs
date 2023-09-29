@@ -10,7 +10,7 @@ public partial class AppShell : Shell
     public AppShell()
 	{
 		InitializeComponent();
-		//RegisterRoutes();
+		RegisterRoutes();
 	}
 
 

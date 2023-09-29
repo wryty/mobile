@@ -7,11 +7,18 @@ public partial class AboutPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void LeaderboardPageButtonClicked(object sender, EventArgs e)
+    private void OnLinkTapped(object sender, EventArgs e)
     {
-        Label label = new Label();
-        label.Text = "Пробный текст для LeaderboardPage";
-        aboutPageStackLayout.Add(label);
+        if (sender is BindableObject bindable)
+        {
+            if (bindable.BindingContext is Span span)
+            {
+                string url = span.Text;
+
+                // Откройте ссылку в браузере
+                Launcher.TryOpenAsync(new Uri(url));
+            }
+        }
     }
 
 }

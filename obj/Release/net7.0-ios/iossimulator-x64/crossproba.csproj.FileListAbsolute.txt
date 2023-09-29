@@ -298,3 +298,4 @@ C:\Users\wryty\Desktop\mobile\obj\Release\net7.0-ios\iossimulator-x64\refint\cro
 C:\Users\wryty\Desktop\mobile\obj\Release\net7.0-ios\iossimulator-x64\crossproba.pdb
 C:\Users\wryty\Desktop\mobile\obj\Release\net7.0-ios\iossimulator-x64\crossproba.genruntimeconfig.cache
 C:\Users\wryty\Desktop\mobile\obj\Release\net7.0-ios\iossimulator-x64\ref\crossproba.dll
+C:\Users\wryty\Desktop\mobile\obj\Release\net7.0-ios\iossimulator-x64\build-signature\signature

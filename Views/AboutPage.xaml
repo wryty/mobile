@@ -134,6 +134,27 @@
                    LineBreakMode="WordWrap"
                    Margin="0,0,0,0" />
 
+            <Label Text="Cссылки на источники."
+                   FontSize="15"
+                   TextColor="#444444"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,0" />
+            <Label Text="http://schemas.microsoft.com/dotnet/2021/maui"
+                   FontSize="14"
+                   TextColor="Blue"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,0" />
+            <Label Text="https://umr.rcokoit.ru/upload/editor/files/methodical_cabinet/information_security/2018/case-2018.pdf"
+                   FontSize="14"
+                   TextColor="Blue"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,0" />
+            <Label Text="https://www.nur.kz/technologies/internet/1980088-kiberbezopasnost-chto-eto-takoe-i-zachem-ona-nuzhna/"
+                   FontSize="14"
+                   TextColor="Blue"
+                   LineBreakMode="WordWrap"
+                   Margin="0,0,0,0" />
+
         </StackLayout>
     </ScrollView>
 </ContentPage>
