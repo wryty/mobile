@@ -10,6 +10,60 @@
             Spacing="20"
             Padding="16,20"
             VerticalOptions="Center">
+
+            <StackLayout Margin="0,0,0,16"
+                         HorizontalOptions="Center">
+                <Label Text="Наша команда"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       TextColor="#007acc" 
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Студенты Марийского Радиомеханического Техникума группы П-31"
+                       FontSize="18"
+                       TextColor="#007acc" 
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Главный разработчик"
+                       FontSize="18"
+                       TextColor="#000000" 
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Айдар Сабиров (wryty)"
+                       FontSize="18"
+                       TextColor="#007acc" 
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Дизайнер"
+                       FontSize="18"
+                       TextColor="#000000" 
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Мария Пермякова"
+                       FontSize="18"
+                       TextColor="#007acc" 
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Контент-менеджер"
+                       FontSize="18"
+                       TextColor="#000000" 
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Мария Сидорова"
+                       FontSize="18"
+                       TextColor="#007acc" 
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Помощник дизайнера"
+                       FontSize="18"
+                       TextColor="#000000" 
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Екатерина Чехута"
+                       FontSize="18"
+                       TextColor="#007acc" 
+                       HorizontalTextAlignment="Center"/>
+            </StackLayout>
             <!-- Заголовок статьи -->
             <Label Text="Актуальность кибербезопасности"
                    FontSize="28"
